@@ -8,7 +8,7 @@ module "api" {
 
   django_default_from_email = "no-reply@multinet.app"
   heroku_app_name = "multinet"
-  team_name = data.heroku_team.multinet.name
+  heroku_team_name = data.heroku_team.multinet.name
   project_slug = "multinet-api"
 
   # TODO
