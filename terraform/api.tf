@@ -30,33 +30,33 @@ module "api" {
   #}
 }
 
-data "aws_iam_user" "api" {
-  user_name = module.api.heroku_iam_user_id
-}
+#data "aws_iam_user" "api" {
+  #user_name = module.api.heroku_iam_user_id
+#}
 
-resource "aws_s3_bucket" "upload_bucket" {
-  bucket = "multinet-api-upload"
-  acl    = "private"
-}
+#resource "aws_s3_bucket" "upload_bucket" {
+  #bucket = "multinet-api-upload"
+  #acl    = "private"
+#}
 
-resource "aws_iam_user_policy" "upload_bucket" {
-  name = "mutlinet-api-bucket"
-  user = data.aws_iam_user.api.user_name
-  policy = data.aws_iam_policy_document.multinet_bucket.json
-}
+#resource "aws_iam_user_policy" "upload_bucket" {
+  #name = "mutlinet-api-bucket"
+  #user = data.aws_iam_user.api.user_name
+  #policy = data.aws_iam_policy_document.multinet_bucket.json
+#}
 
-data "aws_iam_policy_document" "multinet_bucket" {
-  statement {
-    actions = [
-      # TODO Figure out minimal set of permissions django storages needs for S3
-      "s3:*",
-    ]
-    resources = [
-      aws_s3_bucket.upload_bucket.arn,
-      "${aws_s3_bucket.upload_bucket.arn}/*",
-    ]
-  }
-}
+#data "aws_iam_policy_document" "multinet_bucket" {
+  #statement {
+    #actions = [
+      ## TODO Figure out minimal set of permissions django storages needs for S3
+      #"s3:*",
+    #]
+    #resources = [
+      #aws_s3_bucket.upload_bucket.arn,
+      #"${aws_s3_bucket.upload_bucket.arn}/*",
+    #]
+  #}
+#}
 
 #resource "aws_iam_role" "write_public_dataset" {
   #name               = "write-public-dataset"
