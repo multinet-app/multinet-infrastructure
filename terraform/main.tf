@@ -12,7 +12,7 @@ terraform {
 // This is the "project" account, the primary account with most resources
 provider "aws" {
   region              = "us-east-2"
-  allowed_account_ids = ["201301540100"]
+  allowed_account_ids = ["842483300902"]
   # Must set AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY envvars
 }
 
