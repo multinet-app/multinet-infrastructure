@@ -22,7 +22,7 @@ module "api" {
   #heroku_cloudamqp_plan   = "squirrel-1"
   #heroku_papertrail_plan  = "forsta"
 
-  django_cors_origin_whitelist = ["https://multinet.app"]
+  django_cors_origin_whitelist = ["https://multinet.app", "https://web.next.multinet.app"]
   django_cors_origin_regex_whitelist = ["^https:\\/\\/[0-9a-z\\-]+--multinet-app\\.netlify\\.app$"]
 
   #additional_django_vars = {
