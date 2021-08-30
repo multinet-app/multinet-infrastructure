@@ -28,6 +28,11 @@ module "api" {
   #additional_django_vars = {
     #DJANGO_SENTRY_DSN = ""
   #}
+
+  additional_sensitive_django_vars = {
+    DJANGO_MULTINET_ARANGO_PASSWORD = var.MULTINET_ARANGO_PASSWORD
+    DJANGO_MULTINET_ARANGO_READONLY_PASSWORD = var.MULTINET_ARANGO_READONLY_PASSWORD
+  }
 }
 
 #data "aws_iam_user" "api" {
