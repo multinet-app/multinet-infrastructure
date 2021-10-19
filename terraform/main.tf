@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "app.terraform.io"
-    organization = "multinet"
+    organization = "VisualizationDesignLab"
 
     workspaces {
       name = "multinet-prod"
@@ -12,7 +12,7 @@ terraform {
 // This is the "project" account, the primary account with most resources
 provider "aws" {
   region              = "us-east-2"
-  allowed_account_ids = ["842483300902"]
+  allowed_account_ids = ["875692789645"]
   # Must set AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY envvars
 }
 
