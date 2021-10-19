@@ -20,7 +20,7 @@ resource "aws_route53_record" "db-testing" {
 
 # Heroku API managed by api.tf
 
-# Netlify clients
+# Netlify clients, all point to the netlify load balancer
 resource "aws_route53_record" "client-apex" {
   zone_id = aws_route53_zone.multinet.zone_id
   name    = "multinet.app"
