@@ -15,7 +15,8 @@ module "api" {
   subdomain_name   = "api"
 
   django_cors_origin_whitelist = ["https://multinet.app", "https://multimatrix.multinet.app", "https://multilink.multinet.app"]
-  django_cors_origin_regex_whitelist = ["^https:\\/\\/[0-9a-z\\-]+--multinet-app\\.netlify\\.app$"]
+  django_cors_origin_regex_whitelist = ["^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multinet-client\\.netlify\\.app$", "^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multimatrix\\.netlify\\.app$", "^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multilink\\.netlify\\.app$"]
+  
 
   additional_sensitive_django_vars = {
     DJANGO_MULTINET_ARANGO_PASSWORD = var.MULTINET_ARANGO_PASSWORD
