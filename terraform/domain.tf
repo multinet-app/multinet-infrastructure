@@ -50,6 +50,14 @@ resource "aws_route53_record" "multilink" {
   records = ["75.2.60.5"]
 }
 
+resource "aws_route53_record" "multidynamic" {
+  zone_id = aws_route53_zone.multinet.zone_id
+  name    = "multidynamic.multinet.app"
+  type    = "A"
+  ttl     = "300"
+  records = ["75.2.60.5"]
+}
+
 # Docs
 resource "aws_route53_record" "docs" {
   zone_id = aws_route53_zone.multinet.zone_id
