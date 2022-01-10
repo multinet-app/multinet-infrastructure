@@ -14,7 +14,7 @@ module "api" {
   route53_zone_id  = aws_route53_zone.multinet.zone_id
   subdomain_name   = "api"
 
-  django_cors_origin_whitelist = ["https://multinet.app", "https://multimatrix.multinet.app", "https://multilink.multinet.app", "https://vdl.sci.utah.edu"]
+  django_cors_origin_whitelist = ["https://multinet.app", "https://multimatrix.multinet.app", "https://multilink.multinet.app", "https://multidynamic.multinet.app", "https://vdl.sci.utah.edu"]
   django_cors_origin_regex_whitelist = ["^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multinet-client\\.netlify\\.app$", "^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multimatrix\\.netlify\\.app$", "^https:\\/\\/deploy-preview-[0-9a-z\\-]+--next-multilink\\.netlify\\.app$"]
   
 
