@@ -8,13 +8,6 @@ resource "aws_route53_record" "db" {
   name    = "db.multinet.app"
   type    = "CNAME"
   ttl     = "300"
-  records = ["ec2-3-22-105-197.us-east-2.compute.amazonaws.com"]
-}
-resource "aws_route53_record" "db-testing" {
-  zone_id = aws_route53_zone.multinet.zone_id
-  name    = "db-testing.multinet.app"
-  type    = "CNAME"
-  ttl     = "300"
   records = ["ec2-3-14-123-189.us-east-2.compute.amazonaws.com"]
 }
 
