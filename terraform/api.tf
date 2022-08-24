@@ -21,5 +21,6 @@ module "api" {
   additional_sensitive_django_vars = {
     DJANGO_MULTINET_ARANGO_PASSWORD          = var.MULTINET_ARANGO_PASSWORD
     DJANGO_MULTINET_ARANGO_READONLY_PASSWORD = var.MULTINET_ARANGO_READONLY_PASSWORD
+    DJANGO_SENTRY_DSN                        = "https://ba68e31d5a4341fe949f36012c0a3fd8@o267860.ingest.sentry.io/2103083"
   }
 }
