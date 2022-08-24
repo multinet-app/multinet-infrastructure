@@ -1,6 +1,6 @@
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "VisualizationDesignLab"
 
     workspaces {
@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 #provider "heroku" {
-  # Must set HEROKU_EMAIL, HEROKU_API_KEY envvars
+# Must set HEROKU_EMAIL, HEROKU_API_KEY envvars
 #}
 
 data "aws_caller_identity" "project_account" {}
